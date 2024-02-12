@@ -57,11 +57,12 @@ img{
 .right-half {
     margin-top: 0;
     padding: 0;
-    width: max(65vw,400px);
+    width: 100%;
 }
 
 .form {
     background-color:white;
+    max-width: 500px;
 }
 .submit {
     background-color: aqua;
@@ -71,7 +72,7 @@ img{
 .right-half header{
     background-color: rgba(240, 240, 240, 1);
     margin-bottom: 2rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     
 }
 
@@ -87,16 +88,25 @@ margin: 0;
 .right-half header h2:last-of-type {
     padding-bottom: 2rem;
 }
-
-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+form h2 {
     margin-left: 2rem;
-    margin-right: 5rem;
 }
 
-form > p {
-    flex: 1;
+.top-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 5rem;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.left-form {
+    margin-right:2rem;
+}
+
+.left-form,
+.right-form {
+    flex:1
 }
