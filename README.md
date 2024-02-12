@@ -7,4 +7,7 @@
 
 
 --main form function to be worked on
-![](./srnshot-1.jpg "hello")
+--also
+    -wrap the header text whene minimizing
+    -set a min width on form div
+![](./srnshot-1.jpg "styling done")
