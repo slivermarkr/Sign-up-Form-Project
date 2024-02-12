@@ -7,6 +7,7 @@
 * {
   box-sizing: border-box;  
   font-family: sans-serif;
+  color: rgb(71, 71, 73);
 }
 
 body{
@@ -23,7 +24,7 @@ body {
 }
 
 body div:first-of-type{
-    width: max(35vw,300px);
+    width: max(40vw,300px);
 }
 
 
@@ -103,14 +104,16 @@ form h2 {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-left: 2rem;
+
     margin-right: 5rem;
     gap: 9px;
     flex-wrap: wrap;
 
 }
-.left-form {
+.left-form,
+.right-form {
     margin-right:2rem;
+    margin-left: 2rem;
 }
 
 .left-form,
@@ -145,10 +148,12 @@ form h2 {
 }
 
 label {
+    display: inline-block;
     text-transform: uppercase;
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 2px;
+    width: 100%;
 }
 
 input {
