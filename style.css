@@ -23,6 +23,7 @@ body {
 
 }
 
+
 body div:first-of-type{
     width: max(40vw,300px);
 }
@@ -56,6 +57,14 @@ img{
     height: auto;
     opacity: .9;
 }
+
+footer {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    position: fixed;
+    bottom: .5em;
+    left: 1em;
+} 
 .right-half {
     margin-top: 0;
     padding: 0;
