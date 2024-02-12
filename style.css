@@ -1,7 +1,7 @@
 @font-face {
     font-family: "myFont";
 
-    src: url(../../Downloads/fonts/Norse-Bold.otf);
+    src: url(./Norse-Bold.otf);
 }
 
 * {
