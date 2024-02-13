@@ -175,6 +175,7 @@ input:invalid:focus{
     color: white;
     font-size: .8em;
     border-radius: 0 5px;
+    width: 70%;
 }
 
 .error.active {
