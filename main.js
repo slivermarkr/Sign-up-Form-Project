@@ -1,10 +1,8 @@
 const form = document.querySelector('#form');
 const inputs = document.querySelectorAll('input');
 let span = document.querySelector('.error');
-
-console.log(form)
-console.log(inputs)
-console.log(span);
+let password = document.querySelector('#pwd');
+let confPwd = document.querySelector('#conf-pwd');
 
 inputs.forEach(input => {
     input.addEventListener('input', (e) => {
@@ -29,14 +27,14 @@ function showError(input){
         case "pwd":
             if(input.validity.tooShort) {
                 spanText.innerHTML = `Password must be ${input.minLength} characters long; you entered ${input.value.length} char.`;
-                spanText.className = "error active"
+                spanText.className = "error active";
             }
         break;
 
         case "phone":
             if(input.validity.tooShort) {
                 spanText.innerHTML = `Phone number must be ${input.minLength} digits long; you entered ${input.value.length} digits.`;
-                spanText.className = "error active"
+                spanText.className = "error active";
             }
         break;
     }
@@ -52,4 +50,12 @@ form.addEventListener('submit', (e) => {
             e.preventDefault();
         }
     })
+
+    if(password.value !== confPwd.value){
+        let passwordError = confPwd.nextElementSibling;
+        console.log(passwordError)
+        passwordError.innerHTML = "Password does not match"
+        passwordError.className = "error active"
+        e.preventDefault();
+    }
 })
