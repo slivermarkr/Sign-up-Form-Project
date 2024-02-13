@@ -54,7 +54,7 @@ form.addEventListener('submit', (e) => {
     if(password.value !== confPwd.value){
         let passwordError = confPwd.nextElementSibling;
         console.log(passwordError)
-        passwordError.innerHTML = "Password does not match"
+        passwordError.innerHTML = "Password does not match. Try again"
         passwordError.className = "error active"
         e.preventDefault();
     }
