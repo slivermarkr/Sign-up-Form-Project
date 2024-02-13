@@ -15,8 +15,32 @@ inputs.forEach(input => {
 
 function showError(input){
     let spanText = input.nextElementSibling;
-    spanText.className = "error"
-    spanText.innerHTML = ""
+    spanText.className = "error";
+    spanText.innerHTML = "";
+
+    switch (input.id) {
+        case "email": 
+            if(input.validity.typeMismatch){
+                spanText.className = "error active"
+                spanText.textContent = "You must enter a valid email address my son"
+            }
+        break;
+
+        case "pwd":
+            if(input.validity.tooShort) {
+                spanText.innerHTML = `Password must be ${input.minLength} characters long; you entered ${input.value.length} char.`;
+                spanText.className = "error active"
+            }
+        break;
+
+        case "phone":
+            if(input.validity.tooShort) {
+                spanText.innerHTML = `Phone number must be ${input.minLength} digits long; you entered ${input.value.length} digits.`;
+                spanText.className = "error active"
+            }
+        break;
+    }
+
 }
 
 form.addEventListener('submit', (e) => {
