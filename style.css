@@ -24,13 +24,13 @@ body {
 }
 
 .left-half{
-    width: max(35vw,300px);
+    width: min(50vw,600px);
 }
 
 
 .left-half {
     background-image: url(./images/denny-muller-x1-KU_WwJyM-unsplash.jpg);
-
+    background-repeat: no-repeat;
     background-size: cover;
 }
 .logo {
@@ -67,7 +67,7 @@ footer {
 .right-half {
     margin-top: 0;
     padding: 0;
-    width: 65vw;
+    min-width: 65vw;
 }
 
 .form {
@@ -167,4 +167,16 @@ input:focus{
 
 input:invalid:focus{
     border-color: red ;
+}
+.error {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(143, 23, 23);
+    color: white;
+    font-size: .8em;
+    border-radius: 0 5px;
+}
+
+.error.active {
+    padding: 3px;
 }
