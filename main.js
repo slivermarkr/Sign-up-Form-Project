@@ -46,14 +46,13 @@ form.addEventListener('submit', (e) => {
         if(input.validity.valueMissing) {
             let spanText = input.nextElementSibling;
             spanText.className = "error active"
-            spanText.innerHTML = "This shit is required"
+            spanText.innerHTML = "This field is required"
             e.preventDefault();
         }
     })
 
     if(password.value !== confPwd.value){
         let passwordError = confPwd.nextElementSibling;
-        console.log(passwordError)
         passwordError.innerHTML = "Password does not match. Try again"
         passwordError.className = "error active"
         e.preventDefault();
