@@ -180,3 +180,7 @@ input:invalid:focus{
 .error.active {
     padding: 3px;
 }
+
+input::placeholder {
+    opacity: .5;
+}
