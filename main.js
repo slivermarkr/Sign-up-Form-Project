@@ -8,9 +8,24 @@ console.log(span);
 
 inputs.forEach(input => {
     input.addEventListener('input', (e) => {
-        let spanText = input.nextElementSibling;
-        spanText.className = "error active"
-        spanText.innerHTML = "Try if its working"
-        console.log(spanText)
+        showError(input);
+    })
+})
+
+
+function showError(input){
+    let spanText = input.nextElementSibling;
+    spanText.className = "error"
+    spanText.innerHTML = ""
+}
+
+form.addEventListener('submit', (e) => {
+    inputs.forEach(input => {
+        if(input.validity.valueMissing) {
+            let spanText = input.nextElementSibling;
+            spanText.className = "error active"
+            spanText.innerHTML = "This shit is required"
+            e.preventDefault();
+        }
     })
 })
